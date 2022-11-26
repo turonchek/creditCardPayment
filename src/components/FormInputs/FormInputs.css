@@ -1,0 +1,30 @@
+.input__container{
+    position: relative;
+    font-size: 1rem;
+    color: #333;
+}
+.form-input,
+.form-select{
+    margin: 1rem 0;
+    padding: 0.75rem 0.25rem;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+}
+
+.input-grp{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+}
+
+.mt {
+    margin-top: 8rem;
+}
+
+.input__name{
+    color:#555;
+    font-size: .90rem;
+}
