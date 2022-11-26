@@ -1,0 +1,32 @@
+.payment-page_btn{
+    width: 100%;
+    padding: 1rem 0.5rem;
+    margin-top: 1.5rem;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    background-color: #060a24;
+    color: #FFF;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+}
+
+.payment-page_btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #3b2dd2fa;
+    border-radius: 7px;
+    z-index: -1;
+}
+
+.payment-page_btn:hover:before {
+    width: 100%;
+    transition: .2s all;
+}

@@ -1,0 +1,20 @@
+.payment-page_card{
+    height: 240px;
+    width: 100%;
+    max-width: 385px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-position: center;
+    color: #eee;
+    filter: drop-shadow(1px 3px 10px #222);
+    animation: fadeIn .2s linear 1;
+}

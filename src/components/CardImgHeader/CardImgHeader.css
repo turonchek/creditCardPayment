@@ -1,0 +1,19 @@
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.card-header__sticker {
+    width: 50px;
+    height: 40px;
+    background-image: url("https://images.pexels.com/photos/728471/pexels-photo-728471.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-position: center;
+    background-size: cover;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.logo {
+    max-width: 60px;
+}

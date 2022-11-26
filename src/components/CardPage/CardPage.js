@@ -1,11 +1,10 @@
 import React from 'react';
-import { CardImg } from './CardImg';
-import { Form } from './Form';
+import { Form } from '../Form/Form';
+import './CardPage.css'
 
 export const CardPage = () => {
     return (
-        <div>
-            <CardImg/>
+        <div className='payment-page container'>
             <Form/>
         </div>
     );
