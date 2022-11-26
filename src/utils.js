@@ -1,0 +1,32 @@
+const imageUrls = [
+    {
+        name:"visa",
+        id:1,
+        value:"https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png"
+    },
+    {
+        name:"mastercard",
+        id:2,
+        value:"https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_vrt_rev_92px_2x.png"
+    },
+    {
+        name:"discover",
+        id:3,
+        value:"https://www.discover.com/company/images/newsroom/media-downloads/discover.png"
+    },
+    {
+        name:"american-express",
+        id:4,
+        value:"https://s1.q4cdn.com/692158879/files/design/svg/american-express-logo.svg"
+    },
+    {
+        name:"diners_club",
+        id:5,
+        value:"https://cdn4.iconfinder.com/data/icons/simple-peyment-methods/512/diners_club-512.png"
+    },
+    {
+        name:"JCB",
+        id:6,
+        value:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JCB_logo.svg/1280px-JCB_logo.svg.png"
+    },
+]
