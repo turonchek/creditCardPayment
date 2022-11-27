@@ -12,9 +12,12 @@ export const Form = () => {
     const [creditCardNumber, setCreditCardNumber] = useState('#### #### #### ####');
     const [cardType, setCardType] = useState('');
     const [cardTypeUrl, setCardTypeUrl] = useState('https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png');
-    const [cardHolder, setCardHolder] = useState('Your Full Name');
-    const [expireMonth, setExpireMonth] = useState('MM');
-    const [expireYear, setExpireYear] = useState('YYYY');
+
+    const [inputState, setInputState] = useState({
+        cardHolder:'',
+        expireMonth:'mm',
+        expireYear:'yyyy'
+    });
 
     const handleNumber = (e) => {
         setCreditCardNumber(e.target.rawValue);
@@ -28,39 +31,33 @@ export const Form = () => {
         setCardTypeUrl(newCardTypeUrl ? newCardTypeUrl.value : 'https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png')
     }
 
-    const handleCardHolder = (value) => {
-        setCardHolder(value)
-    }
-
-    const handleExpireMonth = (value) => {
-        setExpireMonth(value);
-    }
-
-    const handleExpireYear = (value) => {
-        setExpireYear(value);
+    const handleInputState = (evt) => {
+        const value = evt.target.value;
+        setInputState({
+            ...inputState,
+            [evt.target.name]: value
+        });
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
     }
 
-
     return (
         <form onSubmit={handleSubmit} className='payment-page_form'>
             <CardImg 
                 cardTypeUrl={cardTypeUrl}
                 creditCardNumber={creditCardNumber}
-                cardHolder={cardHolder}
-                expireMonth={expireMonth}
-                expireYear={expireYear}/>
+                cardHolder={inputState.cardHolder}
+                expireMonth={inputState.expireMonth}
+                expireYear={inputState.expireYear}/>
             <FormInputs
                 handleNumber={handleNumber}
                 handleType={handleType}
-                handleCardHolder={handleCardHolder}
-                expireMonth={expireMonth}
-                handleExpireMonth={handleExpireMonth}
-                expireYear={expireYear}
-                handleExpireYear={handleExpireYear}
+                handleInputState={handleInputState}
+                cardHolder={inputState.cardHolder}
+                expireMonth={inputState.expireMonth}
+                expireYear={inputState.expireYear}
                 />
             <FormBtn cardType={cardType}/>
         </form>

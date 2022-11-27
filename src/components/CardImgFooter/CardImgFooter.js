@@ -6,7 +6,7 @@ export const CardImgFooter = ({cardHolder, expireMonth, expireYear}) => {
         <div className="card-footer">
             <div>
                 <h5>Card Holder</h5>
-                <h3>{cardHolder}</h3>
+                <h3>{cardHolder==="" ? "Your full name" : cardHolder}</h3>
             </div>
             <div>
                 <h5>Expires</h5>

@@ -2,7 +2,7 @@ import React from 'react';
 import Cleave from 'cleave.js/react';
 import './FormInputs.css'
 
-export const FormInputs = ({handleType, handleNumber, handleCardHolder,expireMonth, handleExpireMonth,expireYear, handleExpireYear}) => {
+export const FormInputs = ({handleType, handleNumber,cardHolder,handleInputState,expireMonth,expireYear}) => {
     
     return (
         <>
@@ -21,12 +21,12 @@ export const FormInputs = ({handleType, handleNumber, handleCardHolder,expireMon
             </div>
             <div className="input__container">
                 <h4 className='input__name'>Card Holder</h4>
-                <input onChange={(e) =>handleCardHolder(e.target.value)} className='form-input' type="text" placeholder="Please enter your full name" required/>
+                <input onChange={(e) => handleInputState(e)} value={cardHolder} name='cardHolder' className='form-input' type="text" placeholder="Please enter your full name" required/>
             </div>
             <div className="input-grp">
                 <div className="input__container">
                     <h4 className='input__name'>Expiration Month</h4>
-                    <select value={expireMonth} onChange={(e) => handleExpireMonth(e.target.value)} className='form-select'>
+                    <select value={expireMonth} name='expireMonth' onChange={(e) => handleInputState(e)} className='form-select'>
                         <option value="01">January</option>
                         <option value="02">February</option>
                         <option value="03">March</option>
@@ -43,7 +43,7 @@ export const FormInputs = ({handleType, handleNumber, handleCardHolder,expireMon
                 </div>
                 <div className="input__container">
                     <h4 className='input__name'>Year</h4>
-                    <select value={expireYear} onChange={(e) => handleExpireYear(e.target.value)} className='form-select'>
+                    <select value={expireYear} name='expireYear' onChange={(e) => handleInputState(e)} className='form-select'>
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
