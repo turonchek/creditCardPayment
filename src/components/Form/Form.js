@@ -4,6 +4,9 @@ import { CardImg } from '../CardImg/CardImg'
 import { FormInputs } from '../FormInputs/FormInputs';
 import { imageUrls } from '../../utils';
 import './Form.css'
+import { CardImgHeader } from '../CardImgHeader/CardImgHeader';
+import { CardImgBody } from '../CardImgBody/CardImgBody';
+import { CardImgFooter } from '../CardImgFooter/CardImgFooter';
 
 
 
@@ -45,12 +48,14 @@ export const Form = () => {
 
     return (
         <form onSubmit={handleSubmit} className='payment-page_form'>
-            <CardImg 
-                cardTypeUrl={cardTypeUrl}
-                creditCardNumber={creditCardNumber}
-                cardHolder={inputState.cardHolder}
-                expireMonth={inputState.expireMonth}
-                expireYear={inputState.expireYear}/>
+            <CardImg>
+                <CardImgHeader cardTypeUrl={cardTypeUrl}/>
+                <CardImgBody creditCardNumber={creditCardNumber}/>
+                <CardImgFooter 
+                    cardHolder={inputState.cardHolder}
+                    expireMonth={inputState.expireMonth}
+                    expireYear={inputState.expireYear}/>
+            </CardImg>
             <FormInputs
                 handleNumber={handleNumber}
                 handleType={handleType}
