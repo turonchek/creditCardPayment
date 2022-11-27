@@ -1,12 +1,12 @@
 import React from 'react';
 import './CardImgHeader.css'
 
-export const CardImgHeader = () => {
+export const CardImgHeader = ({cardTypeUrl}) => {
     return (
         <div className="card-header">
             <div className="card-header__sticker"></div>
                 <div>
-                    <img className="logo" src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png" alt="Card logo"/>
+                    <img className="logo" src={cardTypeUrl} alt="Card logo"/>
                 </div>
         </div>
     );

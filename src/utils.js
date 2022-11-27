@@ -1,4 +1,4 @@
-const imageUrls = [
+export const imageUrls = [
     {
         name:"visa",
         id:1,

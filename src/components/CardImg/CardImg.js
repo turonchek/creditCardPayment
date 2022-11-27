@@ -4,11 +4,12 @@ import { CardImgFooter } from '../CardImgFooter/CardImgFooter';
 import { CardImgHeader } from '../CardImgHeader/CardImgHeader';
 import './CardImg.css'
 
-export const CardImg = () => {
+export const CardImg = ({creditCardNumber,cardTypeUrl}) => {
+
     return (
         <div className='payment-page_card'>
-            <CardImgHeader/>
-            <CardImgBody/>
+            <CardImgHeader cardTypeUrl={cardTypeUrl}/>
+            <CardImgBody creditCardNumber={creditCardNumber}/>
             <CardImgFooter/>
         </div>
     );

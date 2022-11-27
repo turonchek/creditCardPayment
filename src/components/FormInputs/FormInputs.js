@@ -1,11 +1,23 @@
 import React from 'react';
+import Cleave from 'cleave.js/react';
 import './FormInputs.css'
 
-export const FormInputs = () => {
+export const FormInputs = ({handleType,handleNumber}) => {
+    
     return (
         <>
             <div className='input__container mt'>
                 <h4 className='input__name'>Enter card number</h4>
+                <Cleave
+                    className='form-input'
+                    delimiter="-"
+                    options={{
+                        creditCard: true,
+                        onCreditCardTypeChanged: handleType
+                    }}
+                    onChange={handleNumber}
+                    placeholder="Please enter your credit card number"
+                />
             </div>
             <div className="input__container">
                 <h4 className='input__name'>Card Holder</h4>
