@@ -34,7 +34,7 @@ export const Form = () => {
             <FormInputs
                 handleNumber={handleNumber}
                 handleType={handleType}/>
-            <FormBtn/>
+            <FormBtn cardType={cardType}/>
         </form>
     );
 }
