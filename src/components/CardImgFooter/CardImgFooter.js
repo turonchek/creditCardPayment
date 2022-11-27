@@ -1,7 +1,7 @@
 import React from 'react';
 import './CardImgFooter.css'
 
-export const CardImgFooter = ({cardHolder}) => {
+export const CardImgFooter = ({cardHolder, expireMonth}) => {
     return (
         <div className="card-footer">
             <div>
@@ -10,7 +10,7 @@ export const CardImgFooter = ({cardHolder}) => {
             </div>
             <div>
                 <h5>Expires</h5>
-                <h3>07 / 2023</h3>
+                <h3>{expireMonth} / 2023</h3>
             </div>
         </div>
     );

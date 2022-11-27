@@ -2,7 +2,7 @@ import React from 'react';
 import Cleave from 'cleave.js/react';
 import './FormInputs.css'
 
-export const FormInputs = ({handleType,handleNumber,handleCardHolder}) => {
+export const FormInputs = ({handleType, handleNumber, handleCardHolder,expireMonth, handleExpireMonth}) => {
     
     return (
         <>
@@ -25,26 +25,25 @@ export const FormInputs = ({handleType,handleNumber,handleCardHolder}) => {
             </div>
             <div className="input-grp">
                 <div className="input__container">
-                    <h4 className='input__name'>Expiration Year</h4>
-                    <select className='form-select'>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
+                    <h4 className='input__name'>Expiration Month</h4>
+                    <select value={expireMonth} onChange={(e) => handleExpireMonth(e.target.value)} className='form-select'>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
                     </select>
                 </div>
                 <div className="input__container">
-                    <h4 className='input__name'>Month</h4>
+                    <h4 className='input__name'>Year</h4>
                     <select className='form-select'>
-                        <option value="2021">2021</option>
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
@@ -53,6 +52,7 @@ export const FormInputs = ({handleType,handleNumber,handleCardHolder}) => {
                         <option value="2027">2027</option>
                         <option value="2028">2028</option>
                         <option value="2029">2029</option>
+                        <option value="2029">2030</option>
                         </select>
                 </div>
                 <div className="input__container">
