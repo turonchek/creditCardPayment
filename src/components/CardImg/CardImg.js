@@ -4,7 +4,7 @@ import { CardImgFooter } from '../CardImgFooter/CardImgFooter';
 import { CardImgHeader } from '../CardImgHeader/CardImgHeader';
 import './CardImg.css'
 
-export const CardImg = ({creditCardNumber,cardTypeUrl,cardHolder,expireMonth}) => {
+export const CardImg = ({creditCardNumber,cardTypeUrl,cardHolder,expireMonth,expireYear}) => {
 
     return (
         <div className='payment-page_card'>
@@ -12,7 +12,8 @@ export const CardImg = ({creditCardNumber,cardTypeUrl,cardHolder,expireMonth}) =
             <CardImgBody creditCardNumber={creditCardNumber}/>
             <CardImgFooter 
                 cardHolder={cardHolder}
-                expireMonth={expireMonth}/>
+                expireMonth={expireMonth}
+                expireYear={expireYear}/>
         </div>
     );
 }

@@ -14,6 +14,7 @@ export const Form = () => {
     const [cardTypeUrl, setCardTypeUrl] = useState('https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png');
     const [cardHolder, setCardHolder] = useState('Your Full Name');
     const [expireMonth, setExpireMonth] = useState('MM');
+    const [expireYear, setExpireYear] = useState('YYYY');
 
     const handleNumber = (e) => {
         setCreditCardNumber(e.target.rawValue);
@@ -31,24 +32,36 @@ export const Form = () => {
         setCardHolder(value)
     }
 
-    const handleExpireMonth = (newValue) => {
-        setExpireMonth(newValue);
+    const handleExpireMonth = (value) => {
+        setExpireMonth(value);
+    }
+
+    const handleExpireYear = (value) => {
+        setExpireYear(value);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
     }
 
 
     return (
-        <form className='payment-page_form'>
+        <form onSubmit={handleSubmit} className='payment-page_form'>
             <CardImg 
                 cardTypeUrl={cardTypeUrl}
                 creditCardNumber={creditCardNumber}
                 cardHolder={cardHolder}
-                expireMonth={expireMonth}/>
+                expireMonth={expireMonth}
+                expireYear={expireYear}/>
             <FormInputs
                 handleNumber={handleNumber}
                 handleType={handleType}
                 handleCardHolder={handleCardHolder}
                 expireMonth={expireMonth}
-                handleExpireMonth={handleExpireMonth}/>
+                handleExpireMonth={handleExpireMonth}
+                expireYear={expireYear}
+                handleExpireYear={handleExpireYear}
+                />
             <FormBtn cardType={cardType}/>
         </form>
     );

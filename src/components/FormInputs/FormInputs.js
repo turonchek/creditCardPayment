@@ -2,7 +2,7 @@ import React from 'react';
 import Cleave from 'cleave.js/react';
 import './FormInputs.css'
 
-export const FormInputs = ({handleType, handleNumber, handleCardHolder,expireMonth, handleExpireMonth}) => {
+export const FormInputs = ({handleType, handleNumber, handleCardHolder,expireMonth, handleExpireMonth,expireYear, handleExpireYear}) => {
     
     return (
         <>
@@ -43,7 +43,7 @@ export const FormInputs = ({handleType, handleNumber, handleCardHolder,expireMon
                 </div>
                 <div className="input__container">
                     <h4 className='input__name'>Year</h4>
-                    <select className='form-select'>
+                    <select value={expireYear} onChange={(e) => handleExpireYear(e.target.value)} className='form-select'>
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
@@ -52,7 +52,7 @@ export const FormInputs = ({handleType, handleNumber, handleCardHolder,expireMon
                         <option value="2027">2027</option>
                         <option value="2028">2028</option>
                         <option value="2029">2029</option>
-                        <option value="2029">2030</option>
+                        <option value="2030">2030</option>
                         </select>
                 </div>
                 <div className="input__container">
