@@ -2,7 +2,7 @@ import React from 'react';
 import Cleave from 'cleave.js/react';
 import './FormInputs.css'
 
-export const FormInputs = ({handleType,handleNumber}) => {
+export const FormInputs = ({handleType,handleNumber,handleCardHolder}) => {
     
     return (
         <>
@@ -21,7 +21,7 @@ export const FormInputs = ({handleType,handleNumber}) => {
             </div>
             <div className="input__container">
                 <h4 className='input__name'>Card Holder</h4>
-                <input className='form-input' type="text" placeholder="Please enter your full name" required/>
+                <input onChange={(e) =>handleCardHolder(e.target.value)} className='form-input' type="text" placeholder="Please enter your full name" required/>
             </div>
             <div className="input-grp">
                 <div className="input__container">

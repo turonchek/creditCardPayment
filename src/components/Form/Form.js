@@ -12,6 +12,7 @@ export const Form = () => {
     const [creditCardNumber, setCreditCardNumber] = useState('#### #### #### ####');
     const [cardType, setCardType] = useState('');
     const [cardTypeUrl, setCardTypeUrl] = useState('https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png');
+    const [cardHolder, setCardHolder] = useState('Your Full Name');
 
     const handleNumber = (e) => {
         setCreditCardNumber(e.target.rawValue);
@@ -25,15 +26,21 @@ export const Form = () => {
         setCardTypeUrl(newCardTypeUrl ? newCardTypeUrl.value : 'https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png')
     }
 
+    const handleCardHolder = (value) => {
+        setCardHolder(value)
+    }
+
 
     return (
         <form className='payment-page_form'>
             <CardImg 
                 cardTypeUrl={cardTypeUrl}
-                creditCardNumber={creditCardNumber}/>
+                creditCardNumber={creditCardNumber}
+                cardHolder={cardHolder}/>
             <FormInputs
                 handleNumber={handleNumber}
-                handleType={handleType}/>
+                handleType={handleType}
+                handleCardHolder={handleCardHolder}/>
             <FormBtn cardType={cardType}/>
         </form>
     );
